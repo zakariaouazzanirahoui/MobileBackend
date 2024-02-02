@@ -17,7 +17,13 @@ public class User_Infos {
     @Column(unique = true)
     private String email;
 
-    private boolean flag=true;
-
+    private boolean flag =true;
+    public User_Infos(String udid, String first_name, String last_name, String email) {
+        this.UDID = udid;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.email = email;
+        this.flag = false;
+    }
 
 }

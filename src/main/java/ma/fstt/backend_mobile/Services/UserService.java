@@ -24,6 +24,14 @@ public class UserService {
         return this.userRepository.findById(udid);
     }
 
+    public boolean checkUdidExistence(String UDID) {
+        // Implement your logic to check if the UDID exists in the database
+        // This could involve querying your UserRepository or your database directly
+        // Return true if the UDID exists, false otherwise
+        // For example, assuming UserRepository has a method findByUdid
+        return userRepository.findByUDID(UDID).isPresent();
+    }
+
 
 
 }
